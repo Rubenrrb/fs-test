@@ -1,0 +1,9 @@
+<div class="container">
+  <ul>
+    {% for collection in collections %}
+    <li>
+      <a href={{ collection.url }}>{{ collection.title }} - {{ collection.all_products_count}}</a>
+      {% endfor %}
+    </li>
+  </ul>
+</div>
