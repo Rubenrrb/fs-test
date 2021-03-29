@@ -27,14 +27,29 @@
     {{ current_variant.price | money }}
     <label for="Quantity">quantity</label>
     <input type="number" id="Quantity" name="quantity" value="1" min="1">
-    <button type="submit" name="add" id="AddToCart">Add to cart</button>
+    <button type="submit" name="add" id="AddToCart" onclick="addToCart('AddToCartForm'); return false;">Add to cart</button>
   </form>
   <div>{{ product.description }}</div>
 </div>
 
+<!-- <script>
+  function addToCart() {
+    jQuery.post('/cart/add.js', {
+      items: [
+        {
+          quantity: parseInt($("#Quantity").val()),
+          id: {{ product.id }},
+          properties: { "cart_index": {{ cart.item_count }} }
+        }
+      ]
+    })
+  }
+</script> -->
+
+
 <!-- -----------modal-------------- -->
 
-<div class="modal" id="product-modal" tabindex="-1" role="dialog">
+<!-- <div class="modal" id="product-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -62,3 +77,8 @@
   </div>
 </div>
 
+<script>
+  $(window).on('load', function () {
+    $('#product-modal').modal('show');
+  });
+</script> -->
