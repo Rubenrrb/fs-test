@@ -47,6 +47,7 @@ hr {
   background-color: rgb(40, 40, 40);
     a {
       color: white!important;
+      font-size: 17px;
     }
 }
 
@@ -84,4 +85,14 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.products {
+  padding: 16px;
+
+}
+
+.cart {
+  padding: 16px;
+
 }
