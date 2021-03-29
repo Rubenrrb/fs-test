@@ -79,6 +79,12 @@ hr {
   .stock:hover {
     background-color: rgb(24,119,242);
     color: white;
+    font-size: 0;
+  }
+
+  .stock:hover:after {
+    content: attr(data-hover);
+    font-size: 14px;
   }
 
 

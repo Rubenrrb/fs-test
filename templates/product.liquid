@@ -41,7 +41,7 @@
     {% assign description='No stock' %}
     {% endif %}
 
-    <button type="submit" class={{color}} name="add" id="AddToCart"
+    <button type="submit" data-hover="Add to cart" class={{color}} name="add" id="AddToCart"
       onclick="addToCart('AddToCartForm'); return false;">
       {{ description }}
     </button>
