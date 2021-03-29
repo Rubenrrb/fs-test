@@ -32,37 +32,21 @@
   <div>{{ product.description }}</div>
 </div>
 
-<!-- <script>
-  function addToCart() {
-    jQuery.post('/cart/add.js', {
-      items: [
-        {
-          quantity: parseInt($("#Quantity").val()),
-          id: {{ product.id }},
-          properties: { "cart_index": {{ cart.item_count }} }
-        }
-      ]
-    })
-  }
-</script> -->
+<!-- ---------------- modal ---------------- -->
 
-
-<!-- -----------modal-------------- -->
-
-<!-- <div class="modal" id="product-modal" tabindex="-1" role="dialog">
+<div class="modal" id="item-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Cart</h5>
+        <h5 class="modal-title">My cart</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Item Current Stock: {{ current_variant.inventory_quantity }}</p>
-        <p>Current Items in Cart: {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{
+        <p>Items Stock: {{ current_variant.inventory_quantity }}</p>
+        <p>Items in Cart: {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{
           cart.total_price | money }})</p>
-        <p>List of Items in Cart:
+        <p>Shopping Cart:
         <p>
         <ul>
           {% for item in cart.items %}
@@ -79,6 +63,8 @@
 
 <script>
   $(window).on('load', function () {
-    $('#product-modal').modal('show');
+    $('#item-modal').modal('show');
   });
-</script> -->
+</script>
+
+
